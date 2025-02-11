@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -110,5 +112,9 @@ legend {
 }
 
 body {
-  background-color: #FCE4A4;
+  background-color: #fce4a4;
+  font-size: 14px;
+  font-weight: 400;
+  color: #443133;
+  font-family: 'Montserrat', sans-serif;
 }
