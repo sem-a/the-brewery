@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Logo";
+  src: url(../../assest/font/mr_hamiltoneg.ttf);
+}
+
+header {
+  width: 100vw;
+  padding: 21px 0px;
+}
+h1.logo {
+  font-family: 'Logo';
+  font-size: 48px;
+  text-align: center;
+}

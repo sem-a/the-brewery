@@ -1,31 +1,36 @@
 import React from "react";
-import styles from "./index.module.css";
 import { Button } from "../button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import styles from "./index.module.css";
+import { Link } from "react-router-dom";
+import { PATHS } from "../../paths";
 
-const Recipe = () => {
+type RecipeType = {
+  id: number;
+  title: string;
+  image: string;
+  ingredients: string[];
+};
+
+const Recipe: React.FC<RecipeType> = ({ id, title, image, ingredients }) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <h2 className={styles.title}>Салат Летний</h2>
-        <Button>открыть</Button>
+        <h2 className={styles.title}>{title}</h2>
+        <div className={styles.nav}>
+          <Link to={`${PATHS.recipe}/${id}`}>
+            <Button>открыть</Button>
+          </Link>
+        </div>
       </div>
       <div className={styles.body}>
-        <img
-          src={require("../../assest/1.png")}
-          alt="photo"
-          className={styles.image}
-        />
+        <img src={image} alt="photo" className={styles.image} />
         <div className={styles.textСontainer}>
-          <p className={styles.description}>
-            ctetur adipisicing elit. Magni, beatae voluptates commodi, suscipit
-            molestiae perspiciatis sed, vero numquam blanditiis maxime porro quo
-            fugiat eaque possimus atque doloremque natus consequatur dolorem?
-          </p>
           <ul className={styles.ingridients}>
-            <li>помидор</li>
-            <li>огурец</li>
-            <li>лук</li>
-            <li>лист салата</li>
+            {ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
           </ul>
         </div>
       </div>

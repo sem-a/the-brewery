@@ -118,3 +118,18 @@ body {
   color: #443133;
   font-family: 'Montserrat', sans-serif;
 }
+
+p.results {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 84px;
+  padding-left: 3px;
+}
+
+p.results span {
+  font-weight: 600;
+}
+
+.recipe-list {
+  padding-bottom: 105px;
+}
