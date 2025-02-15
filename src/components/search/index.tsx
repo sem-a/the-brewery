@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 import { useIngredients } from "../../store/hooks/ingredients";
 import { Ingredients, RecipeApi } from "../../types";
 import { useRecipes } from "../../store/hooks/recipes";
+import { apiKey } from "../../api";
 
 const Search = () => {
   const { updateIngredients } = useIngredients();
@@ -17,8 +18,6 @@ const Search = () => {
     }
 
     const ingredientString = ingredients.join(",+");
-
-    const apiKey = "4915829bef914b4893e07056fe98b1e2";
 
     const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredientString}`;
 
@@ -72,12 +71,12 @@ const Search = () => {
 
   return (
     <div className={styles.search}>
-      <Label htmlFor="ingredients">Желаемые ингредиенты:</Label>
+      <Label htmlFor="ingredients">Desired ingredients:</Label>
       <Input
-        placeholder="Помидор, лук, огурец"
+        placeholder="Tomato, onion, potato"
         onChange={(e) => handleChangeInput(e)}
       />
-      <FormButton onClick={handleSearch}>найти рецепты</FormButton>
+      <FormButton onClick={handleSearch}>find</FormButton>
     </div>
   );
 };

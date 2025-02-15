@@ -11,11 +11,9 @@ function App() {
 
   function getRecipeWordCount(count: number) {
     if (count === 1) {
-      return "рецепт"; // 1 рецепт
-    } else if (count > 1 && count < 5) {
-      return "рецепта"; // 2, 3, 4 рецепта
+      return "recipe"; // 1 рецепт
     } else {
-      return "рецептов"; // 5 и больше рецептов
+      return "recipes";
     }
   }
 
@@ -25,10 +23,10 @@ function App() {
       <Container>
         <Search />
         <p className="results">
-          Результат поиска:{" "}
+          Search result:{" "}
           <span>
             {recipes.length === 0
-              ? "ничего не найдено"
+              ? "nothing found"
               : `${recipes.length} ${getRecipeWordCount(recipes.length)}`}
           </span>
         </p>

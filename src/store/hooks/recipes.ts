@@ -12,3 +12,8 @@ export const useRecipes = () => {
 
   return { recipes, updateRecipes };
 };
+
+export const useRecipeById = (id: number) => {
+  const recipes = useSelector((state: RootState) => state.recipe.recipes);
+  return recipes.find((recipe) => recipe.id === id);
+};

@@ -3,10 +3,11 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import { PATHS } from "./paths";
-import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Recipe from "./pages/recipe";
+import "./index.css";
+import Edit from "./pages/edit";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: `${PATHS.recipe}/:id`,
     element: <Recipe />,
+  },
+  {
+    path: `${PATHS.edit}/:id`,
+    element: <Edit />,
   },
 ]);
 

@@ -24,12 +24,14 @@ export const Label: React.FC<LabelType> = ({ children, htmlFor }) => {
 type InputType = {
   type?: string | undefined;
   placeholder?: string | undefined;
+  value?: string | undefined;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const Input: React.FC<InputType> = ({
   type = "text",
   placeholder,
+  value,
   onChange,
 }) => {
   return (
@@ -45,6 +47,7 @@ export const Input: React.FC<InputType> = ({
         borderRadius: "14px",
         boxShadow: "0px 0px 5px 0px rgba(68, 49, 51, 0.25)",
       }}
+      value={value}
       onChange={onChange}
     />
   );

@@ -5,6 +5,7 @@ import { faPen } from "@fortawesome/free-solid-svg-icons";
 import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../paths";
+import { H2 } from "../title";
 
 type RecipeType = {
   id: number;
@@ -17,10 +18,10 @@ const Recipe: React.FC<RecipeType> = ({ id, title, image, ingredients }) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
+        <H2>{title}</H2>
         <div className={styles.nav}>
           <Link to={`${PATHS.recipe}/${id}`}>
-            <Button>открыть</Button>
+            <Button>open</Button>
           </Link>
         </div>
       </div>
