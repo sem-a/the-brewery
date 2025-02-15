@@ -20,29 +20,7 @@ function App() {
   return (
     <>
       <Header />
-      <Container>
-        <Search />
-        <p className="results">
-          Search result:{" "}
-          <span>
-            {recipes.length === 0
-              ? "nothing found"
-              : `${recipes.length} ${getRecipeWordCount(recipes.length)}`}
-          </span>
-        </p>
-        <div className="recipe-list">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              id={recipe.id}
-              title={recipe.title}
-              image={recipe.image}
-              ingredients={recipe.ingredients}
-            />
-          ))}
-        </div>
-      </Container>
-      {/* <Layout /> */}
+      <Container></Container>
     </>
   );
 }
