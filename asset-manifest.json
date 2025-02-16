@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/yadro-beer/static/css/main.0e905b7b.css",
-    "main.js": "/yadro-beer/static/js/main.54b75951.js",
-    "static/media/mr_hamiltoneg.ttf": "/yadro-beer/static/media/mr_hamiltoneg.0f535e11049ab9faa221.ttf",
-    "index.html": "/yadro-beer/index.html",
-    "main.0e905b7b.css.map": "/yadro-beer/static/css/main.0e905b7b.css.map",
-    "main.54b75951.js.map": "/yadro-beer/static/js/main.54b75951.js.map"
+    "main.css": "/the-brewery/static/css/main.ca385b69.css",
+    "main.js": "/the-brewery/static/js/main.54b75951.js",
+    "static/media/mr_hamiltoneg.ttf": "/the-brewery/static/media/mr_hamiltoneg.0f535e11049ab9faa221.ttf",
+    "index.html": "/the-brewery/index.html",
+    "main.ca385b69.css.map": "/the-brewery/static/css/main.ca385b69.css.map",
+    "main.54b75951.js.map": "/the-brewery/static/js/main.54b75951.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e905b7b.css",
+    "static/css/main.ca385b69.css",
     "static/js/main.54b75951.js"
   ]
 }
