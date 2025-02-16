@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/the-brewery/static/css/main.ca385b69.css",
-    "main.js": "/the-brewery/static/js/main.2e82a0a2.js",
+    "main.js": "/the-brewery/static/js/main.6bd2270a.js",
     "static/media/mr_hamiltoneg.ttf": "/the-brewery/static/media/mr_hamiltoneg.0f535e11049ab9faa221.ttf",
     "index.html": "/the-brewery/index.html",
     "main.ca385b69.css.map": "/the-brewery/static/css/main.ca385b69.css.map",
-    "main.2e82a0a2.js.map": "/the-brewery/static/js/main.2e82a0a2.js.map"
+    "main.6bd2270a.js.map": "/the-brewery/static/js/main.6bd2270a.js.map"
   },
   "entrypoints": [
     "static/css/main.ca385b69.css",
-    "static/js/main.2e82a0a2.js"
+    "static/js/main.6bd2270a.js"
   ]
 }
