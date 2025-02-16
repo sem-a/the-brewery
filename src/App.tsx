@@ -5,6 +5,8 @@ import Brewery from "./components/brewery";
 import { useBreweries } from "./store/hooks/brewery";
 import { BreweryType } from "./types";
 import { Button } from "./components/button";
+import LoadingSpinner from "./components/loading";
+import ErrorAlert from "./components/error";
 
 function App() {
   const { breweries, status, error } = useBreweries();
@@ -15,11 +17,11 @@ function App() {
   };
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   if (status === "failed") {
-    return <div>Error: {error}</div>;
+    return <ErrorAlert error={error} />;
   }
 
   return (
