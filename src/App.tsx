@@ -1,26 +1,46 @@
-import React from "react";
-import { Layout } from "./components/layout";
+import React, { useState } from "react";
 import { Container } from "./components/container";
-import Recipe from "./components/recipe";
-import Search from "./components/search";
 import Header from "./components/header";
-import { useRecipes } from "./store/hooks/recipes";
+import Brewery from "./components/brewery";
+import { useBreweries } from "./store/hooks/brewery";
+import { BreweryType } from "./types";
+import { Button } from "./components/button";
 
 function App() {
-  const { recipes } = useRecipes();
+  const { breweries, status, error } = useBreweries();
+  const [visibleCount, setVisibleCount] = useState(10);
 
-  function getRecipeWordCount(count: number) {
-    if (count === 1) {
-      return "recipe"; // 1 рецепт
-    } else {
-      return "recipes";
-    }
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 10);
+  };
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "failed") {
+    return <div>Error: {error}</div>;
   }
 
   return (
     <>
       <Header />
-      <Container></Container>
+      <Container>
+        {breweries.slice(0, visibleCount).map((brewery: BreweryType) => (
+          <Brewery key={brewery.id} {...brewery} />
+        ))}
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "14px",
+            paddingBottom: "14px",
+          }}
+        >
+          {visibleCount < breweries.length && (
+            <Button onClick={handleLoadMore}>показать еще</Button>
+          )}
+        </div>
+      </Container>
     </>
   );
 }

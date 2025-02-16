@@ -1,0 +1,39 @@
+.card {
+  margin-top: 21px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(68, 49, 51, 0.25);
+  padding: 21px;
+  border-radius: 14px;
+  transition: all 0.5s ease 0s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.body {
+  margin-top: 21px;
+}
+
+.info span{
+  font-weight: 700;
+
+}
+.info {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
